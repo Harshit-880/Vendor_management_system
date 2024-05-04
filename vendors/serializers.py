@@ -30,10 +30,7 @@ class VendorUpdateSerializer(serializers.ModelSerializer):
         instance.address = validated_data.get('address', instance.address)
         instance.vendor_code = validated_data.get('vendor_code', instance.vendor_code)
         
-        # Save the instance to apply the updates
         instance.save()
-        
-        # Return the updated instance
         return instance
 
 class PurchaseOrderListSerializer(serializers.ModelSerializer):
@@ -60,11 +57,8 @@ class PurchaseOrederUpdate(serializers.ModelSerializer):
         instance.status = validated_data.get('status', instance.status)
         instance.quality_rating = validated_data.get('quality_rating', instance.quality_rating)
         instance.acknowledgment_date = validated_data.get('acknowledgment_date', instance.acknowledgment_date)
-        
-        # Save the instance to apply the updates
         instance.save()
         
-        # Return the updated instance
         return instance
     
 
