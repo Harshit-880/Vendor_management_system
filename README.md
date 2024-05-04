@@ -40,10 +40,24 @@ This project is a Vendor Management System using Django and Django REST Framewor
 ## API Endpoints
 ### Vendor Management
 - `POST /api/vendor/`: Create a new vendor.
-    json
+    Required_fields_example :
+    {
+    "name": "rahul",
+    "contact_details": "your_details",
+    "address": "your_address",
+    "vendor_code": "qwertyu"
+}
+
 - `GET /api/vendors/`: List all vendors.
 - `GET /api/vendors/{vendor_id}/`: Retrieve vendor details.
 - `PATCH /api/vendors/{vendor_id}/update/`: Update vendor details.
+Required_fields_example :
+    {
+    "name": "rahul",
+    "contact_details": "your_details",
+    "address": "your_address",
+    "vendor_code": "qwertyu"
+}
 - `DELETE /api/vendors/{vendor_id}/delete/`: Delete a vendor.
 
 ### Purchase Order Tracking
